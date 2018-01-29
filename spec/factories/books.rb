@@ -1,11 +1,12 @@
 FactoryGirl.define do
   factory :book do
-    name "MyString"
-    short_description "MyText"
-    long_description "MyText"
-    books_chapter_index "MyString"
-    published_date "2018-01-29"
-    genre "MyString"
-    user nil
+		name { Faker::Book.title }
+		books_chapter_index { Faker::FamilyGuy}
+		genre { Faker::Book.genre }
+		short_description { Faker::Lorem.paragraph(2)  }
+		long_description { Faker::Lorem.paragraph }
+		published_date {Faker::Date}
+		books_chapter_index { Faker::Number.between(1, 100) }
+		user
   end
 end

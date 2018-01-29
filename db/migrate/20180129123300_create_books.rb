@@ -7,7 +7,7 @@ class CreateBooks < ActiveRecord::Migration[5.1]
       t.string :books_chapter_index
       t.date :published_date
       t.string :genre
-      t.references :user, foreign_key: true
+      t.references :author, foreign_key: true
 
       t.timestamps
     end

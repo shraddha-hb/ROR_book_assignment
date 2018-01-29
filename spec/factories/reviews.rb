@@ -1,9 +1,9 @@
 FactoryGirl.define do
   factory :review do
-    reviewer_name "MyString"
-    ratings "9.99"
-    review_title "MyString"
-    review "MyText"
-    book nil
+    reviewer_name {Faker::Name.name}
+    ratings {Faker::Number.between(1, 5)}
+    review_title { Faker::Lorem.sentence }
+    review {Faker::Lorem.paragraph}
+    book 
   end
 end
