@@ -2,12 +2,12 @@ module Api::V1
 
   class ReviewsController < ApplicationController
     before_action :set_review, only: [:show, :update, :destroy]
-    # before_action :authenticate_user!
+    before_action :authenticate_user!
     # GET /reviews
     def index
       @reviews = Review.all
 
-      render json: @reviews
+      render json: @reviews.page params[:page]
     end
 
     # GET /reviews/1

@@ -4,6 +4,6 @@ FactoryGirl.define do
     ratings {Faker::Number.between(1, 5)}
     review_title { Faker::Lorem.sentence }
     review {Faker::Lorem.paragraph}
-    book 
+    book { Book.offset(rand(Book.count)).first.id }
   end
 end

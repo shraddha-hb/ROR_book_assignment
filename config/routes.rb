@@ -5,7 +5,10 @@ Rails.application.routes.draw do
     namespace :v1 do
     resources :authors
     resources :books, only: [:index, :show]
-	  resources :books do
+    resources :search do 
+      get 'search', on: :collection
+    end
+    resources :books do
 	  	resources :reviews
 	  end
     end

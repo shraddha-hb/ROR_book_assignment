@@ -13,7 +13,17 @@ User.delete_all
 	FactoryGirl.create(:user)
 end
 
-10.times do
-	# byebug
-	FactoryGirl.create(:author)
-end
+# 10.times do
+# 	# byebug
+# 	FactoryGirl.create(:author)
+# end
+
+# 10.times do
+# 	# byebug
+# 	FactoryGirl.create(:book)
+# end
+
+# 50.times do
+# 	# byebug
+# 	FactoryGirl.create(:review)
+# end

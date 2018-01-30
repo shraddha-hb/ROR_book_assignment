@@ -1,11 +1,11 @@
 class AuthorsController < ApplicationController
   before_action :set_author, only: [:show, :update, :destroy]
-  # before_action :authenticate_user!
+  before_action :authenticate_user!
   # GET /authors
   def index
     @authors = Author.all
 
-    render json: @authors
+    render json: @authors.page params[:page]
   end
 
   # GET /authors/1
